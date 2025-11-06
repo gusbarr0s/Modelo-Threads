@@ -11,7 +11,7 @@ def main():
     print("threads sistema", tamanho_pool)
 
     inicio = time.time()#comeco
-
+    
     #cria um pool fixo de threads reais
     with concurrent.futures.ThreadPoolExecutor(max_workers=tamanho_pool) as executor:
         for _ in range(n):
@@ -19,7 +19,6 @@ def main():
 
     fim = time.time()  #fim
     tempo_total_ms = (fim - inicio) * 1000 #ms
-
     print("tempo total: ", tempo_total_ms,"ms")
 
 if __name__ == "__main__":
